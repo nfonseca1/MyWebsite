@@ -4,7 +4,15 @@ body {
 	font-family: 'Ubuntu', sans-serif;
 }
 .container {
+	padding: 5vh 10vw 5vh 10vw;
+}
+.heading-container {
+	position: fixed;
+	z-index: -100;
+	top: 0;
+	background-color: #222222;
 	padding: 15vh 10vw 15vw 10vw;
+	width: 100%;
 }
 .heading {
 	width: 32vw;
@@ -33,10 +41,17 @@ h3 {
 	height: 8vh;
 	text-align: center;
 	font-size: 4vh;
-	border-top: 2px solid #3b3b3b;
+	border-top: 3px solid #3b3b3b;
 }
 .projects {
-	margin-top: 7vh;
-	background-color: #2a2a2a;
+	z-index: 15;
 	height: 50vh;
+	margin-top: 63vh;
+	background-color: #282828;
+}
+.project-list {
+	display: flex;
+}
+.project-item {
+	
 }
