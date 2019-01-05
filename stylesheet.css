@@ -51,6 +51,7 @@ h3 {
 }
 .project-list {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
 .project-item {
@@ -117,4 +118,13 @@ h3 {
 }
 .color-game-img {
 	background-image: url("images/color-game.jpg");
+}
+.empire-img {
+	background-image: url("images/empire.jpg");
+}
+.horizon-img {
+	background-image: url("images/horizon.jpg");
+}
+.tanks-img {
+	background-image: url("images/tanks.jpg");
 }
