@@ -40,13 +40,19 @@ h3 {
 	padding-top: 2vh;
 	height: 8vh;
 	text-align: center;
-	font-size: 4vh;
+	font-size: 4.5vh;
 	border-top: 3px solid #404040;
 	color: #202020;
 }
+.caret {
+	position: absolute;
+	margin: 0.25vh 0 0 1vw;
+	height: 5vh;
+	width: 5vh;
+}
 .projects {
 	z-index: 15;
-	margin-top: 63vh;
+	margin-top: 90vh;
 	background-color: #f0f0f0;
 }
 .project-list {
@@ -57,6 +63,7 @@ h3 {
 .project-item {
 	height: 35vh;
 	width: 25vw;
+	margin-bottom: 5vh;
 	background-color: #ededed;
 	background-position: top;
 	background-repeat: no-repeat;
