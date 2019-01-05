@@ -1,34 +1,42 @@
 body {
 	background-color: #222222;
 	color: #eeeeee;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 }
-
 .container {
-	padding: 15vh 0 0 10vw;
+	padding: 15vh 10vw 15vw 10vw;
 }
-
+.heading {
+	width: 32vw;
+}
 h1 {
 	margin: 0;
 	font-size: 8vh;
 }
-
 h3 {
 	margin: 0;
 	font-size: 3vh;
 }
-
 .name {
-	display: inline-block;
-	width: 30vw;
 	padding-bottom: 2vh;
 	border-bottom: 2px solid #e0e0e0;
 }
-
 .hello {
 	color: #aaaab0;
 }
-
 .titles {
 	color: #ff3a3a;
+}
+
+.projects-tab {
+	padding-top: 2vh;
+	height: 8vh;
+	text-align: center;
+	font-size: 4vh;
+	border-top: 2px solid #3b3b3b;
+}
+.projects {
+	margin-top: 7vh;
+	background-color: #2a2a2a;
+	height: 50vh;
 }
