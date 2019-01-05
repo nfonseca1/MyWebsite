@@ -4,7 +4,7 @@ body {
 	font-family: 'Ubuntu', sans-serif;
 }
 .container {
-	padding: 5vh 10vw 5vh 10vw;
+	padding: 5vh 10vw 15vh 10vw;
 }
 .heading-container {
 	position: fixed;
@@ -41,17 +41,47 @@ h3 {
 	height: 8vh;
 	text-align: center;
 	font-size: 4vh;
-	border-top: 3px solid #3b3b3b;
+	border-top: 3px solid #404040;
+	color: #202020;
 }
 .projects {
 	z-index: 15;
-	height: 50vh;
 	margin-top: 63vh;
-	background-color: #282828;
+	background-color: #f0f0f0;
 }
 .project-list {
 	display: flex;
 }
 .project-item {
-	
+	height: 35vh;
+	width: 25vw;
+	background-color: #ededed;
+	background-image: url("images/snappir.jpg");
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: 100% 70%;
+	border: 3px solid #eaeaea;
+	border-radius: 5px;
+}
+.project-heading {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 25vh;
+	padding: 0 0.75vw 0 0.75vw;
+}
+.project-heading-title {
+	color: #1a1a1a;
+	font-size: 3vh;
+	font-weight: bold;
+}
+.project-heading-lang {
+	color: #3a3a90;
+	font-size: 1.75vh;
+	text-align: justify;
+	max-width: 60%;
+}
+.project-description {
+	padding: 1vh 0.75vw 1vh 0.75vw;
+	color: #202020;
+	font-size: 2vh;
 }
