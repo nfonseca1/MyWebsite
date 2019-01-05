@@ -76,6 +76,9 @@ h3 {
 	border: 3px solid #4444ff;
 	transition: border .25s;
 }
+a {
+	text-decoration: none;
+}
 .img-space {
 	height: 14.6vh;
 	width: 100%;
@@ -87,6 +90,7 @@ h3 {
 	text-align: center;
 	opacity: 0;
 	transition: opacity .25s;
+	text-decoration: none;
 }
 .img-space:hover {
 	opacity: 1;
