@@ -51,22 +51,42 @@ h3 {
 }
 .project-list {
 	display: flex;
+	justify-content: space-between;
 }
 .project-item {
 	height: 35vh;
 	width: 25vw;
 	background-color: #ededed;
-	background-image: url("images/snappir.jpg");
 	background-position: top;
 	background-repeat: no-repeat;
 	background-size: 100% 70%;
 	border: 3px solid #eaeaea;
 	border-radius: 5px;
+	transition: border .3s;
+}
+.project-item:hover {
+	border: 3px solid #4444ff;
+	transition: border .25s;
+}
+.img-space {
+	height: 14.6vh;
+	width: 100%;
+	background-color: rgba(255,255,255,.75);
+	color: #2a2ac0;
+	font-size: 3vh;
+	font-weight: bold;
+	padding-top: 10vh;
+	text-align: center;
+	opacity: 0;
+	transition: opacity .25s;
+}
+.img-space:hover {
+	opacity: 1;
+	transition: opacity .25s;
 }
 .project-heading {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 25vh;
 	padding: 0 0.75vw 0 0.75vw;
 }
 .project-heading-title {
@@ -80,8 +100,21 @@ h3 {
 	text-align: justify;
 	max-width: 60%;
 }
+.lang-short {
+	max-width: 56%;
+}
 .project-description {
 	padding: 1vh 0.75vw 1vh 0.75vw;
 	color: #202020;
 	font-size: 2vh;
+}
+
+.snappir-img {
+	background-image: url("images/snappir.jpg");
+}
+.countries-img {
+	background-image: url("images/countries.jpg");
+}
+.color-game-img {
+	background-image: url("images/color-game.jpg");
 }
