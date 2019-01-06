@@ -3,6 +3,18 @@ body {
 	color: #eeeeee;
 	font-family: 'Ubuntu', sans-serif;
 }
+.design {
+	display: inline-block;
+	position: fixed;
+	z-index: -10;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	background-image: url(images/design.png);
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+}
 .container {
 	padding: 5vh 10vw 15vh 10vw;
 }
@@ -40,6 +52,8 @@ body {
 	font-weight: bold;
 }
 .info-menu {
+	z-index: 100;
+	border-left: 1px solid gray;
 	padding: 0 1vw 0 1vw;
 	position: fixed;
 	top: 0;
