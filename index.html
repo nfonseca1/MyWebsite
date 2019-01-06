@@ -11,7 +11,7 @@
 	<div class="info">Info</div>
 </div>
 
-<div class="info-menu">
+<div class="info-menu info-menu-off">
 	<img class="more-icon" src="images/collapse.png">
 		<div class="info-content">
 		<div class="more-heading">Skills</div>
@@ -129,4 +129,50 @@
 	</div>
 </div>
 </body>
+<script>
+	var infoBtn = document.querySelector(".info");
+	var moreBtn = document.querySelector(".more-icon");
+	var infoMenu = document.querySelector(".info-menu");
+
+	infoBtn.addEventListener("click", function(){
+		infoMenu.classList.remove("info-menu-off");
+		infoMenu.classList.add("info-menu-on");
+
+		animateOn();
+	})
+
+	moreBtn.addEventListener("click", function(){
+		animateOff();
+	})
+
+	function animateOn(){
+		var width = 0;
+		var intervalOn = setInterval(frame, 5);
+
+		function frame(){
+			if (width >= 20){
+				clearInterval(intervalOn);
+			} else {
+				width++;
+				infoMenu.style.width = width + 'vw';
+			}
+		}
+	}
+
+	function animateOff(){
+		var width = 20;
+		var intervalOn = setInterval(frame, 5);
+
+		function frame(){
+			if (width <= 0){
+				infoMenu.classList.remove("info-menu-on");
+		infoMenu.classList.add("info-menu-off");
+				clearInterval(intervalOn);
+			} else {
+				width--;
+				infoMenu.style.width = width + 'vw';
+			}
+		}
+	}
+</script>
 </html>

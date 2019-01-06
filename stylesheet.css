@@ -16,15 +16,14 @@ body {
 }
 .navbar {
 	display: flex;
-	padding: 0 10vw 0 10vw;
 	justify-content: space-between;
-	width: 80vw;
+	width: 100%;
 	height: 5vh;
 	background-color: #272727;
 }
 .logo {
 	display: inline;
-	margin-top: 0.5vh;
+	margin: 0.5vh 0 0 10vw;
 	font-size: 3vh;
 	font-family: 'Ubuntu', sans-serif;
 	font-style: italic;
@@ -32,7 +31,7 @@ body {
 }
 .info {
 	display: inline;
-	margin-top: 0.5vh;
+	margin: 0.5vh 10vw 0 0;
 	font-size: 3vh;
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: bold;
@@ -43,8 +42,14 @@ body {
 	top: 0;
 	right: 0vw;
 	height: 100vh;
-	width: 20vw;
 	background-color: #f0f0f0;
+}
+.info-menu-on {
+	display: inline-block;
+	width: 0;
+}
+.info-menu-off {
+	display: none;
 }
 .info-content {
 	margin-top: 8vh;
