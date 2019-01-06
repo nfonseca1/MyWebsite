@@ -16,7 +16,7 @@ body {
 	background-repeat: no-repeat;
 }
 .container {
-	padding: 5vh 10vw 15vh 10vw;
+	padding: 5vh 9.5vw 15vh 9.5vw;
 }
 .heading-container {
 	position: fixed;
@@ -32,7 +32,7 @@ body {
 	z-index: -5;
 	top: 0;
 	justify-content: space-between;
-	width: 100%;
+	width: 99%;
 	height: 5vh;
 	background-color: #272727;
 }
@@ -134,11 +134,11 @@ h3 {
 .project-list {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 .project-item {
-	height: 35vh;
-	width: 25vw;
+	height: 280px;
+	width: 385px;
 	margin-bottom: 5vh;
 	background-color: #ededed;
 	background-position: top;
@@ -156,13 +156,13 @@ a {
 	text-decoration: none;
 }
 .img-space {
-	height: 14.6vh;
+	height: 120px;
 	width: 100%;
 	background-color: rgba(255,255,255,.75);
 	color: #2a2ac0;
 	font-size: 3vh;
 	font-weight: bold;
-	padding-top: 10vh;
+	padding-top: 80px;
 	text-align: center;
 	opacity: 0;
 	transition: opacity .25s;
@@ -179,12 +179,12 @@ a {
 }
 .project-heading-title {
 	color: #1a1a1a;
-	font-size: 3vh;
+	font-size: 24px;
 	font-weight: bold;
 }
 .project-heading-lang {
 	color: #3a3a90;
-	font-size: 1.75vh;
+	font-size: 13px;
 	text-align: justify;
 	max-width: 60%;
 }
@@ -192,9 +192,9 @@ a {
 	max-width: 56%;
 }
 .project-description {
-	padding: 1vh 0.75vw 1vh 0.75vw;
+	padding: 10px 12px 10px 12px;
 	color: #202020;
-	font-size: 2vh;
+	font-size: 16px;
 }
 
 .snappir-img {
