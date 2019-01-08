@@ -15,22 +15,30 @@
 
 <div class="info-menu info-menu-off">
 	<img class="more-icon" src="https://res.cloudinary.com/dfuxqmces/image/upload/v1546755871/collapse.png">
-		<div class="info-content">
-		<div class="more-heading">Skills</div>
-		<div class="more-details">HTML CSS Bootstrap JavaScript C++ C# PHP ASP.Net Node.JS MySql MongoDB 
+	<div class="info-content">
+		<div class="more-section">
+			<div class="more-heading">Skills</div>
+			<div class="more-details">HTML CSS Bootstrap JavaScript C++ C# PHP ASP.Net Node.JS MySql MongoDB 
+			</div>
 		</div>
-		<div class="more-heading">Email</div>
-		<div class="more-details">me@NathanFonseca.org
+		<div class="more-section">
+			<div class="more-heading">Email</div>
+			<div class="more-details">me@NathanFonseca.org
+			</div>
 		</div>
-		<div class="more-heading">Sources</div>
-		<a href="https://www.linkedin.com/in/nathan-fonseca-b7758b177/"><div class="more-details link">LinkedIn</div></a>
-		<a href="https://www.github.com/nfonseca1/">
-		<div class="more-details link">Github</div>
-		</a>
-		<div class="more-heading">Qualifications</div>
-		<div class="more-details">Associate's in Software Engineering (September 2018)
+		<div class="more-section">
+			<div class="more-heading">Sources</div>
+			<a href="https://www.linkedin.com/in/nathan-fonseca-b7758b177/"><div class="more-details link">LinkedIn</div></a>
+			<a href="https://www.github.com/nfonseca1/">
+			<div class="more-details link">Github</div>
+			</a>
 		</div>
-		<div class="more-details">Currently pursuing - Bachelor of Science in Software Engineering (March 2020)
+		<div class="more-section">
+			<div class="more-heading">Qualifications</div>
+			<div class="more-details">Associate's in Software Engineering (September 2018)
+			</div>
+			<div class="more-details">Currently pursuing - Bachelor of Science in Software Engineering (March 2020)
+			</div>
 		</div>
 	</div>
 </div>
@@ -140,23 +148,48 @@
 		infoMenu.classList.remove("info-menu-off");
 		infoMenu.classList.add("info-menu-on");
 
-		animateOn();
+		if(window.matchMedia("(orientation: landscape)").matches){
+			animateOn();
+		} else {
+			animateOnPortrait();
+		}
 	})
 
 	moreBtn.addEventListener("click", function(){
-		animateOff();
+		if(window.matchMedia("(orientation: landscape)").matches){
+			animateOff();
+		} else {
+			animateOffPortrait();
+		}
 	})
 
 	function animateOn(){
 		var width = 0;
 		var intervalOn = setInterval(frame, 5);
 
+		infoMenu.style.height = "100vh";
 		function frame(){
 			if (width >= 20){
 				clearInterval(intervalOn);
 			} else {
 				width++;
 				infoMenu.style.width = width + 'vw';
+			}
+		}
+	}
+
+	function animateOnPortrait(){
+		console.log("on");
+		var height = 0;
+		var intervalOn = setInterval(frame, 5);
+
+		infoMenu.style.width = "94%";
+		function frame(){
+			if (height >= 40){
+				clearInterval(intervalOn);
+			} else {
+				height+=5;
+				infoMenu.style.height = height + 'vh';
 			}
 		}
 	}
@@ -173,6 +206,22 @@
 			} else {
 				width--;
 				infoMenu.style.width = width + 'vw';
+			}
+		}
+	}
+	function animateOffPortrait(){
+		console.log("off");
+		var height = 40;
+		var intervalOn = setInterval(frame, 5);
+
+		function frame(){
+			if (height <= 0){
+				infoMenu.classList.remove("info-menu-on");
+		infoMenu.classList.add("info-menu-off");
+				clearInterval(intervalOn);
+			} else {
+				height-=5;
+				infoMenu.style.height = height + 'vh';
 			}
 		}
 	}
