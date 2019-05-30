@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Nathan Fonseca</title>
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Ubuntu" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Ubuntu|Kaushan+Script" rel="stylesheet">
 	<link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
@@ -72,7 +72,7 @@
 		</div>
 		<!--Countries-->
 		<div class="project-item countries-img">
-			<a href="http://ict.neit.edu/005111687/webservices/finalproject/final.html">
+			<a href="https://nathanfonseca.org/countries">
 				<div class="img-space">Visit Site</div>
 			</a>
 			<div class="project-heading">
@@ -85,7 +85,7 @@
 		</div>
 		<!--Color Game-->
 		<div class="project-item color-game-img">
-			<a href="http://ict.neit.edu/005111687/colorgame/jscolorgame.html">
+			<a href="https://nathanfonseca.org/colorgame">
 				<div class="img-space">Visit Site</div>
 			</a>
 			<div class="project-heading">
@@ -133,6 +133,19 @@
 			</div>
 			<div class="project-description">
 				A simplistic tank game with UI, aiming mechanics and AI.
+			</div>
+		</div>
+		<!--Project Boost-->
+		<div class="project-item boost-img">
+			<a href="https://nathanfonseca.org/projectboost">
+				<div class="img-space">Play now</div>
+			</a>
+			<div class="project-heading">
+				<div class="project-heading-title">Project Boost</div>
+				<div class="project-heading-lang lang-short">C# Unity</div>
+			</div>
+			<div class="project-description">
+				A simple game where you fly a rocket and avoid obstacles.
 			</div>
 		</div>
 	</div>
@@ -185,7 +198,7 @@
 
 		infoMenu.style.width = "94%";
 		function frame(){
-			if (height >= 40){
+			if (height >= 50){
 				clearInterval(intervalOn);
 			} else {
 				height+=5;
@@ -211,7 +224,7 @@
 	}
 	function animateOffPortrait(){
 		console.log("off");
-		var height = 40;
+		var height = 50;
 		var intervalOn = setInterval(frame, 5);
 
 		function frame(){
