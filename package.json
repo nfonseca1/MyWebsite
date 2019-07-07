@@ -2,7 +2,7 @@
   "name": "my-website",
   "version": "1.0.0",
   "description": "Here you'll simply find a list of projects i've worked on, as well as skills and extra info.",
-  "main": "app.js",
+  "main": "server.js",
   "dependencies": {
     "ejs": "^2.6.2",
     "express": "^4.17.1"
