@@ -19,6 +19,6 @@ app.get("/projectboost", function(req, res){
 	res.render("ProjectBoost/index.ejs");
 });
 
-app.listen(3000, function(){
+app.listen(process.env.PORT, process.env.IP, function(){
     console.log("server started.......");
 });
