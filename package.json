@@ -2,14 +2,14 @@
   "name": "my-website",
   "version": "1.0.0",
   "description": "Here you'll simply find a list of projects i've worked on, as well as skills and extra info.",
-  "main": "server.js",
+  "main": "app.js",
   "dependencies": {
     "ejs": "^2.6.2",
     "express": "^4.17.1"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node server.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
