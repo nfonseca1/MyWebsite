@@ -1,5 +1,4 @@
 var express = require("express");
-const path = require('path');
 var app = express();
 
 app.use(express.static(__dirname + "/public"));
@@ -29,8 +28,12 @@ app.get("/notes/git", function(req, res){
 	res.render("Notes/Git/index.ejs");
 });
 
-app.get("/lightsout", function(req,res){
-	res.render("LightsOut/index.html");
+app.get("/oura", function(req, res){
+	res.redirect("https://cloud.ouraring.com/oauth/authorize?response_type=token&client_id=ARW3E2S44QW5TIZL");
+})
+
+app.get("/oura/log", function(req, res){
+	res.render("Oura/index.ejs", {data: req.query});
 })
 
 app.listen(process.env.PORT || 3000, process.env.IP, function(){
