@@ -33,7 +33,7 @@ app.get("/oura", function(req, res){
 })
 
 app.get("/oura/log", function(req, res){
-	res.render("Oura/index.ejs", {data: req.query);
+	res.render("Oura/index.ejs", {data: JSON.stringify(req.query)});
 })
 
 app.listen(process.env.PORT || 3000, process.env.IP, function(){
