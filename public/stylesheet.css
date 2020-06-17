@@ -55,6 +55,12 @@ body {
 	color: #ff7801;
 	cursor: pointer;
 }
+
+.more-section {
+	display: inline-block;
+	margin-bottom: 3vh;
+	width: 100%;
+}
 @media screen and (orientation: landscape) {
 	.info-menu {
 		z-index: 100;
@@ -122,11 +128,6 @@ body {
 		width: 4vh;
 		float: right;
 	}
-	.more-section {
-		display: inline-block;
-		margin-bottom: 3vh;
-		width: 40vw;
-	}
 	.more-heading {
 		font-size: 3vh;
 		color: #202020;
@@ -176,6 +177,7 @@ body {
 }
 .titles {
 	color: #ff3a3a;
+	letter-spacing: 1px;
 }
 
 .projects-tab {
@@ -217,6 +219,9 @@ body {
 	}
 }
 @media screen and (orientation: portrait) {
+	.titles {
+		font-size: 2vh;
+	}
 	.project-item {
 		height: 60vw;
 		width: 100%;
@@ -344,4 +349,10 @@ a {
 }
 .boost-img {
 	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1548282522/projectboost.png");
+}
+.fluid-app-img {
+	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592356798/fluidTracker.png");
+}
+.notes-app-img {
+	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592356780/noteTaker.png");
 }
