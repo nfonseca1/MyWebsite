@@ -317,16 +317,16 @@ a {
 	}
 	.project-heading-title {
 		color: #1a1a1a;
-		font-size: 3.3vw;
+		font-size: 3.5vw;
 		font-weight: bold;
 	}
 	.in-dev {
-		font-size: 2vw;
+		font-size: 2.5vw;
 		color: #c00000;
 	}
 	.project-heading-lang {
 		color: #3a3a90;
-		font-size: 2.5vw;
+		font-size: 2.7vw;
 		text-align: right;
 		word-spacing: 7px;
 		max-width: 60%;
@@ -337,7 +337,7 @@ a {
 	.project-description {
 		padding: 10px 12px 10px 12px;
 		color: #202020;
-		font-size: 2.75vw;
+		font-size: 3vw;
 	}
 }
 
