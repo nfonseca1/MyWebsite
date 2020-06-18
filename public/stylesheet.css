@@ -1,4 +1,6 @@
 body {
+	padding: 0;
+	margin: 0;
 	background-color: #222222;
 	color: #eeeeee;
 	font-family: 'Ubuntu', sans-serif;
@@ -23,7 +25,7 @@ body {
 	z-index: -100;
 	top: 0;
 	padding: 20vh 10vw 15vw 10vw;
-	width: 100%;
+	width: 100vw;
 }
 .navbar {
 	display: flex;
@@ -31,7 +33,7 @@ body {
 	z-index: -5;
 	top: 0;
 	justify-content: space-between;
-	width: 99%;
+	width: 100vw;
 	height: 5vh;
 	background-color: #272727;
 }
@@ -284,22 +286,27 @@ a {
 	}
 	.project-heading-title {
 		color: #1a1a1a;
-		font-size: 24px;
+		font-size: 2.5vh;
 		font-weight: bold;
+		width: 55%;
+	}
+	.title-long {
+		width: 65%;
+	}
+	.in-dev {
+		font-size: 1.8vh;
+		color: #c00000;
 	}
 	.project-heading-lang {
 		color: #3a3a90;
-		font-size: 13px;
-		text-align: justify;
-		max-width: 60%;
-	}
-	.lang-short {
-		max-width: 56%;
+		font-size: 1.6vh;
+		text-align: right;
+		word-spacing: 5px;
 	}
 	.project-description {
 		padding: 10px 12px 10px 12px;
 		color: #202020;
-		font-size: 16px;
+		font-size: 1.8vh;
 	}
 }
 @media screen and (orientation: portrait) {
@@ -310,13 +317,18 @@ a {
 	}
 	.project-heading-title {
 		color: #1a1a1a;
-		font-size: 28px;
+		font-size: 3.3vw;
 		font-weight: bold;
+	}
+	.in-dev {
+		font-size: 2vw;
+		color: #c00000;
 	}
 	.project-heading-lang {
 		color: #3a3a90;
-		font-size: 17px;
-		text-align: justify;
+		font-size: 2.5vw;
+		text-align: right;
+		word-spacing: 7px;
 		max-width: 60%;
 	}
 	.lang-short {
@@ -325,34 +337,41 @@ a {
 	.project-description {
 		padding: 10px 12px 10px 12px;
 		color: #202020;
-		font-size: 20px;
+		font-size: 2.75vw;
 	}
 }
 
 .snappir-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1546720922/snappir.jpg");
+	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592448643/snappirCropped.png");
 }
 .countries-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1546720922/countries.jpg");
+	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592448643/countriesCropped.png");
 }
 .color-game-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1546720922/color-game.jpg");
+	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592448642/colorCropped.png");
 }
 .empire-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1546720922/empire.jpg");
+	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592448642/empireCropped.png");
 }
 .horizon-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1546720922/horizon.jpg");
+	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592448642/horizonCropped.png");
 }
-.tanks-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1546720922/tanks.jpg");
+.tanks-unreal-img {
+	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592448642/unrealTanksCropped.png");
 }
 .boost-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1548282522/projectboost.png");
+	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592448643/projectBoostCropped.png");
 }
 .fluid-app-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592356798/fluidTracker.png");
+	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592450149/fluidTrackerCropped.png");
 }
 .notes-app-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592356780/noteTaker.png");
+	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592450149/noteTakerCropped.png");
+}
+.tanks-img {
+	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592448643/tanksCropped.png");
+}
+.planni-img {
+	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592448643/plannerCropped.png");
+
 }
