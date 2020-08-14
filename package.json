@@ -6,8 +6,6 @@
   "dependencies": {
     "ejs": "^2.6.2",
     "express": "^4.17.1",
-    "isomorphic-fetch": "^2.2.1",
-    "jsdom": "^16.4.0",
     "path": "^0.12.7"
   },
   "devDependencies": {},

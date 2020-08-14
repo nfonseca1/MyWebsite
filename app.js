@@ -1,8 +1,11 @@
 var express = require("express");
 var app = express();
 
+var basharRoute = require("BasharScraper/app.js")
+
 app.use(express.static(__dirname + "/public"));
 app.engine("html", require("ejs").__express);
+app.use("/scraper", basharRoute);
 
 app.get("/", function(req, res){
 	res.render("index.ejs");
