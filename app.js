@@ -36,6 +36,10 @@ app.get("/oura/log", function(req, res){
 	res.render("Oura/index.ejs", {data: JSON.stringify(req.query)});
 })
 
+app.get("/scraper", function(req, res){
+	res.render("BasharScraper/index.ejs");
+})
+
 app.listen(process.env.PORT || 3000, process.env.IP, function(){
     console.log("server started.......");
 });
