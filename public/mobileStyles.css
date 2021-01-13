@@ -1,0 +1,207 @@
+@media screen and (orientation: portrait) {
+    .navbar {
+        height: 5vh;
+        padding: 1vh 5vw 0 5vw;
+        width: 90%;
+    }
+    .nav-btns {
+        width: 70%;
+    }
+    .nav-btn.projects-btn {
+        position: absolute;
+        right: 20vw;
+        padding: .5vh 2% .5vh 0;
+        font-size: 3vh;
+    }
+    .more-btn {
+        width: 15vw;
+        height: 90%;
+        padding: 0;
+        visibility: visible;
+        background-image: url("./images/hamburger.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .nav-btn.linkedin {
+        width: 0;
+        visibility: hidden;
+    }
+    .nav-btn.github {
+        width: 0;
+        visibility: hidden;
+    }
+
+    .more-nav-options {
+        z-index: -99;
+        padding-top: 6vh;
+        height: auto;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #404040;
+    }
+    .more-nav-btn {
+        padding: 3vw 7vw;
+        text-decoration: none;
+        font-size: 6vw;
+        color: #f0f0f0;
+        text-align: right;
+        display: block;
+    }
+    .more-nav-btn:active {
+        background-color: #606060;
+    }
+
+    .heading-container {
+        padding-top: 15vh;
+        display: block;
+    }
+    .name {
+        font-size: 10vw;
+    }
+    .titles {
+        font-size: 4vw;
+    }
+    .info {
+        padding: 2%;
+        margin-top: 10vh;
+    }
+    .me img {
+        border-width: 5px;
+    }
+    .caption-container {
+        margin-top: 3.25vh;
+    }
+    .caption {
+        padding: .5vh 2vw;
+    }
+    .project-heading-title {
+        font-size: 3.75vw;
+    }
+    .project-description {
+        font-size: 3.25vw;
+    }
+
+    .list-title {
+        margin-top: 15vh;
+    }
+    .projects-list {
+        padding: 0 5vw;
+    }
+    .project {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .project .image {
+        width: 100%;
+        height: 22vh;
+        border-radius: 1vw 1vw 0 0;
+        background-repeat: no-repeat;
+    }
+    .project .image:hover {
+        position: static;
+        width: 100%;
+        height: 22vh;
+        border-radius: 1vw 1vw 0 0;
+        border: none;
+        margin: 0;
+    }
+    
+    .project-info {
+        width: 96%;
+        height: auto;
+        padding: 1vh 2%;
+    }
+    .project-info .description {
+        height: 4.9vh;
+        transition: height 0.5s;
+        overflow: hidden;
+    }
+    .project-info .full-description {
+        height: auto;
+        transition: height 0.5s;
+    }
+    .full-description-btn {
+        visibility: visible;
+        width: 100%;
+        height: 2vh;
+        text-align: center;
+        font-size: 1.5vh;
+        color: #0d0057;
+    }
+    .buttons {
+        width: 100%;
+        height: auto;
+        padding-bottom: 1vh;
+    }
+    .option {
+        padding: 2% 0;
+    }
+
+
+    .image.animate-image.bashar {
+        background-image: url("./images/bashar.gif");
+    }
+    .image.bashar {
+        background-image: url("./images/bashar.JPG");
+    }
+    
+    .image.animate-image.tanks {
+        background-image: url("./images/tanks.gif");
+    }
+    .image.tanks {
+        background-image: url("./images/tanks.png");
+    }
+    
+    .image.animate-image.planni {
+        background-image: url("./images/planni.png");
+    }
+    
+    .image.animate-image.snappir {
+        background-image: url("./images/snappir.gif");
+    }
+    .image.snappir {
+        background-image: url("./images/snappir.JPG");
+    }
+    
+    .image.animate-image.project-boost {
+        background-image: url("./images/projectboost.gif");
+    }
+    .image.project-boost {
+        background-image: url("./images/projectboost.png");
+    }
+    
+    .image.animate-image.countries {
+        background-image: url("./images/countries.gif");
+    }
+    .image.countries {
+        background-image: url("./images/countries.JPG");
+    }
+    
+    .image.animate-image.fluid-app {
+        background-image: url("./images/fluid.gif");
+    }
+    .image.fluid-app {
+        background-image: url("./images/fluid.png");
+    }
+    
+    .image.animate-image.notes-app {
+        background-image: url("./images/notes.gif");
+    }
+    .image.notes-app {
+        background-image: url("./images/notes.png");
+    }
+    
+    .image.animate-image.unreal-tanks {
+        background-image: url("./images/unrealTanks.JPG");
+    }
+    
+    .image.animate-image.color-game {
+        background-image: url("./images/color-game.JPG");
+    } 
+    .image.color-game {
+        background-image: url("./images/color-game.JPG");
+    }
+}

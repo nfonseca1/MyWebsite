@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Project Boost WebGL</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Unity Build.json", {onProgress: UnityProgress});
+    </script>
+    <style>
+      body {
+        font-family: arial;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center; position: absolute; width: 100%;">Project Boost WebGL Build</h2>
+    <br><br><br>
+    <div style="width: 15vw; padding-left: 2vw;">
+      <h3>Controls</h3>
+      <p><strong>Rotate Left</strong> - A</p>
+      <p><strong>Rotate Right</strong> - D</p>
+      <p><strong>Rotate Thrust</strong> - SPACE</p>
+      <p>This demo should only be played on a PC or Mac (not mobile) and ensure that you have enough RAM available. For a mobile version, you can try <a href="mobile/">this version</a> although it is not guaranteed to work properly as WebGL is not optimized for mobile.</p>
+    </div>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">Project Boost</div>
+      </div>
+    </div>
+  </body>
+</html>

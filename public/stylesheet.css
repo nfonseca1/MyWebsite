@@ -4,6 +4,19 @@ body {
 	background-color: #222222;
 	color: #eeeeee;
 	font-family: 'Ubuntu', sans-serif;
+	-ms-overflow-style: none;  /* IE and Edge */
+  	scrollbar-width: none;  /* Firefox */
+}
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+	width: 6px;
+	background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #505050;
 }
 .design {
 	display: inline-block;
@@ -21,11 +34,63 @@ body {
 	padding: 5vh 9.5vw 15vh 9.5vw;
 }
 .heading-container {
+	display: flex;
+	justify-content: space-between;
 	position: fixed;
 	z-index: -100;
 	top: 0;
 	padding: 20vh 10vw 15vw 10vw;
-	width: 100vw;
+	width: 80vw;
+}
+.me {
+	position: absolute;
+	left: 38%;
+	top: -15%;;
+}
+.me img {
+	border: 3px solid#d32222;
+	border-radius: 50%;
+	width: 9.3vh;
+	height: 9.3vh;
+}
+.caption-container {
+	margin-top: 4.2vh;
+	text-align: center;
+}
+.caption {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	padding: .4vh .8vw;
+	background-color: #d32222;
+	border-radius: 3vh;
+	color: #f0f0f0;
+}
+.info {
+	position: relative;
+	margin-top: 5vh;
+	height:auto;
+	background-color: #eaeaea;
+	border-top: 1px solid #fafafa;
+	border-left: 1px solid #fafafa;
+	border-bottom: 1px solid #dadada;
+	border-right: 1px solid #dadada;
+	border-radius: 5px;
+	font-size: 2.25vh;
+	padding: 0 1% 1% 1%;
+	color: #101010;
+	min-width: 20vw;
+	width: auto;
+}
+.info-heading {
+	font-weight: bold;
+	margin-bottom: 3%;
+	margin-top: 8%;
+}
+.info-entry {
+	font-size: 2vh;
+	color: #171717;
+	margin-bottom: 2%;
 }
 .navbar {
 	display: flex;
@@ -33,124 +98,65 @@ body {
 	z-index: -5;
 	top: 0;
 	justify-content: space-between;
-	width: 100vw;
+	width: 80%;
 	height: 5vh;
-	background-color: #272727;
+	background-color: #303030;
+	padding: 0 10vw;
 }
 .logo {
 	display: inline;
-	margin: 0.5vh 0 0 10vw;
 	font-size: 3vh;
 	font-family: 'Kaushan Script', cursive;
 	color: #ff3a3a;
 	font-style: italic;
 	font-weight: bold;
+	padding-top: .25vh;
+	letter-spacing: .2vw;
 }
-.info {
-	display: inline;
-	margin: 0.5vh 10vw 0 0;
-	font-size: 3vh;
-	font-family: 'Ubuntu', sans-serif;
-	font-weight: bold;
-}
-.info:hover {
-	color: #ff7801;
+.logo:hover {
 	cursor: pointer;
+	color: #ff6767;
+	transition: color 0.2s;
+}
+a {
+	text-decoration: none;
+}
+a {
+	text-decoration: none;
+}
+.nav-btns {
+	display: inline-flex;
+	justify-content: space-between;
+	width: 35%;
+}
+.nav-btn {
+	color: #f0f0f0;
+	font-family: 'Ubuntu';
+	font-size: 2.5vh;
+	padding: 1vh 5%;
+	height: 3vh;
+	background-color: rgba(255, 255, 255, 0);
+	transition: background-color 0.2s;
+}
+.nav-btn:hover {
+	background-color: rgba(255,255,255,.5);
 }
 
-.more-section {
-	display: inline-block;
-	margin-bottom: 3vh;
-	width: 100%;
+.more-nav-options {
+	position: absolute;
+	visibility: hidden;
+	z-index: -200;
+	height: 0;
+	width: 0;
 }
-@media screen and (orientation: landscape) {
-	.info-menu {
-		z-index: 100;
-		border-left: 1px solid gray;
-		padding: 0 1vw 0 1vw;
-		position: fixed;
-		top: 0;
-		right: 0vw;
-		height: 100vh;
-		background-color: #f0f0f0;
-	}
-	.info-menu-on {
-		display: inline-block;
-		width: 0;
-	}
-	.info-menu-off {
-		display: none;
-	}
-	.info-content {
-		margin-top: 8vh;
-	}
-	.more-icon {
-		height: 4vh;
-		width: 4vh;
-		float: right;
-		cursor: pointer;
-	}
-	.more-heading {
-		margin-top: 5vh;
-		font-size: 3vh;
-		color: #202020;
-	}
-	.more-details {
-		margin-top: 1vh;
-		font-size: 2vh;
-		color: #404070;
-		text-align: justify;
-	}
-}
-@media screen and (orientation: portrait) {
-	.info-menu {
-		z-index: 100;
-		border-bottom: 1px solid gray;
-		padding: 0 4vw 0 4vw;
-		position: fixed;
-		top: 0;
-		width: 94%;
-		background-color: #f0f0f0;
-	}
-	.info-menu-on {
-		display: inline-block;
-		height: 0;
-	}
-	.info-menu-off {
-		display: none;
-	}
-	.info-content {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		margin-top: 8vh;
-	}
-	.more-icon {
-		height: 4vh;
-		width: 4vh;
-		float: right;
-	}
-	.more-heading {
-		font-size: 3vh;
-		color: #202020;
-	}
-	.more-details {
-		margin-top: 1vh;
-		font-size: 2vh;
-		color: #404070;
-		text-align: justify;
-	}
-}
-.link {
-	color: #2020d5;
-}
+
 @media screen and (orientation: landscape) {
 	.heading {
 		width: 32vw;
 	}
 	h1 {
-		margin: 0;
-		font-size: 8vh;
+		margin: .5vh 0 0 0;
+		font-size: 6vh;
 	}
 	h3 {
 		margin: 0;
@@ -171,7 +177,7 @@ body {
 	}
 }
 .name {
-	padding-bottom: 2vh;
+	padding-bottom: 1.5vh;
 	border-bottom: 2px solid #e0e0e0;
 }
 .hello {
@@ -184,11 +190,17 @@ body {
 
 .projects-tab {
 	padding-top: 2vh;
-	height: 8vh;
+	height: 7vh;
 	text-align: center;
 	font-size: 4.5vh;
-	border-top: 3px solid #404040;
 	color: #202020;
+	cursor: pointer;
+}
+.projects-tab-underline {
+	height: 1px;
+	width: 80%;
+	margin: 0 10%;
+	background-image: linear-gradient(to right, rgba(22, 54, 201, .1), rgba(22, 54, 201, 0.6), rgba(22, 54, 201, 1), rgba(22, 54, 201, .6), rgba(22, 54, 201, .1))
 }
 .caret {
 	position: absolute;
@@ -341,37 +353,40 @@ a {
 	}
 }
 
+.bashar-img {
+	background-image: url("./images/bashar.JPG");
+}
 .snappir-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592448643/snappirCropped.png");
+	background-image: url("./images/snappir.JPG");
 }
 .countries-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592448643/countriesCropped.png");
+	background-image: url("./images/countries.JPG");
 }
 .color-game-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592448642/colorCropped.png");
+	background-image: url("./images/color-game.JPG");
 }
 .empire-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592448642/empireCropped.png");
+	background-image: url("./images/empire.JPG");
 }
 .horizon-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592448642/horizonCropped.png");
+	background-image: url("./images/horizon.JPG");
 }
 .tanks-unreal-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592448642/unrealTanksCropped.png");
+	background-image: url("./images/unrealTanks.JPG");
 }
 .boost-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592448643/projectBoostCropped.png");
+	background-image: url("./images/projectboost.png");
 }
 .fluid-app-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592450149/fluidTrackerCropped.png");
+	background-image: url("./images/fluid.png");
 }
 .notes-app-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592450149/noteTakerCropped.png");
+	background-image: url("./images/notes.png");
 }
 .tanks-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592448643/tanksCropped.png");
+	background-image: url("./images/tanks.png");
 }
 .planni-img {
-	background-image: url("https://res.cloudinary.com/dfuxqmces/image/upload/v1592448643/plannerCropped.png");
+	background-image: url("./images/planni.png");
 
 }

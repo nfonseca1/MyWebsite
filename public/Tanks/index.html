@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Tanks Sandbox Demo</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Tanks Sandbox WebGL Build.json", {onProgress: UnityProgress});
+    </script>
+    <style>
+      body {
+        font-family: arial;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center; position: absolute; width: 100%;">Tanks Sandbox Demo</h2>
+    <br><br><br>
+    <div style="width: 15vw; padding-left: 2vw;">
+      <h3>Controls</h3>
+      <p><strong>Move</strong> - W A S D</p>
+      <p><strong>Fire Primary</strong> - Left Click</p>
+      <p><strong>Fire Secondary</strong> - Right Click</p>
+      <p>This demo should only be played on a PC or Mac (not mobile) and ensure that you have enough RAM available. Also note that the first few seconds of this demo may be very laggy, but should subside soon after</p>
+      <p>This test demo is not intended to represent the finished state. Currently this project is incomplete and still needs much work. Many changes have been made since it's initial phase and so many aspects such as destroying enemies are currently not present. This demo is meant to be a sandbox to play around with the firing, destruction, and AI components of the game. Enemy tanks or the player tank are not destroyable in this demo.</p>
+    </div>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">Tanks</div>
+      </div>
+    </div>
+  </body>
+</html>

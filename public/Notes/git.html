@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html><head>
+	<title>Git Notes</title>
+	<style>
+	@media only screen and (orientation: landscape) {
+		body{
+			padding: 10vh 20vw 10vh 20vw;
+			background-color: #2c2c38;
+			color: #eeeeee;
+			font-family: arial;
+			line-height: 21px;
+			font-size:14px;
+		}
+	}
+	@media only screen and (orientation: portrait) {
+		body{
+			padding: 5vh 5vw 5vh 5vw;
+			background-color: #2c2c38;
+			color: #eeeeee;
+			font-family: arial;
+			line-height: 21px;
+			font-size:14px;
+		}
+	}
+		code {
+			background-color: #333333;
+			color: #ff4444;
+		}
+		h1 {
+			display: inline;
+		}
+		#credits {
+			font-size: 12px;
+			display: inline;
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="git-notes">Git Notes</h1>
+	<p id="credits">Created by Nathan Fonseca</p>
+<h3 id="general">General</h3>
+<ul>
+<li><strong>Initialize a repository:</strong> <code>git init</code> <ul>
+<li>Creates a .git file in that directory which tracks all changes.</li>
+<li>Adding the --bare flag will prevent you from developing in that repo, which is good for centralized repositories that are meant to only act as a storage facility. The directory will therefore end in ".git".</li>
+</ul>
+</li>
+<li><strong>Show branch and tracking info:</strong> <code>git status</code> <ul>
+<li>Shows branch, untracked files and files ready to be committed.</li>
+<li>You should typically do this before you commit, to make sure you have staged the right files.</li>
+</ul>
+</li>
+<li><strong>Stage a file or files:</strong> <code>git add &lt;file(s)&gt;</code> <ul>
+<li>Stages the file (creates a snapshot)/tells git what to include in next commit.</li>
+</ul>
+</li>
+<li><strong>Stage all files:</strong> <code>git add .</code></li>
+<li><strong>Commit the staged files:</strong> <code>git commit -m "&lt;message&gt;"</code><ul>
+<li>Records and saves the staged snapshot with a     descriptive message.</li>
+<li>Using the -a flag will stage all tracked files and commit them at once.</li>
+<li>Commits should be specific. Do so for each significant addition to a project.</li>
+</ul>
+</li>
+</ul>
+<h3 id="undo-changes">Undo Changes</h3>
+<ul>
+<li><strong>Go back to a previous commit:</strong> <code>git checkout &lt;ID&gt;</code> <ul>
+<li>Note the ID(checksum) is shown in git log.</li>
+<li>When doing this, you are now changing the HEAD to the current commit.</li>
+<li>The HEAD is Git's way of indicating which commit is currently checked out (Normally it resides on the tip of the development branch, until doing this).</li>
+<li>When doing this you are no longer on a branch since there are more recent commits than this HEAD.</li>
+<li>In order to commit changes at this point, you must create a new branch first.</li>
+</ul>
+</li>
+<li><strong>Undo last commit:</strong> <code>git revert &lt;ID&gt;</code><ul>
+<li>Undos the commit and Creates a new commit of that undo<ul>
+<li>Git will <em>never</em> lost history</li>
+</ul>
+</li>
+<li>Takes you back to the commit that was before the one you reverted</li>
+</ul>
+</li>
+<li><strong>Undo staged files:</strong> <code>git reset --hard</code><ul>
+<li>Changes all staged files to match the most recent commit</li>
+<li>--hard flag will actually update to last commit</li>
+<li>Leaving out the --hard flag will simply unstage all staged files</li>
+</ul>
+</li>
+<li><strong>Remove unstaged files:</strong> <code>git clean -f</code><ul>
+<li>Permanently removes all unstaged files</li>
+</ul>
+</li>
+</ul>
+<h3 id="branching">Branching</h3>
+<p>Branches offer an independent line of development, where you can make changes without worrying about affecting current files. You can experiment with changes/features and then apply them to your current project, or disregard them. Until two branches are merged, they are like separate projects that you switch between.</p>
+<ul>
+<li><strong>List existing branches:</strong> <code>git branch</code><ul>
+<li>The master is Git's default branch</li>
+<li>The asterisk identifies the current checked out branch</li>
+</ul>
+</li>
+<li><strong>Checkout a branch:</strong> <code>git checkout &lt;branch&gt;</code><ul>
+<li>This will checkout the specified branch (meaning it's now the current, active branch), and therefore checkout the last commit of that branch.</li>
+<li>Master branch should be used for stable versions of a project.</li>
+</ul>
+</li>
+<li><strong>Create a new branch:</strong> <code>git branch &lt;branch&gt;</code><ul>
+<li>Using the -b flag: <code>git branch -b &lt;branch&gt;</code> will also checkout the new branch as well.</li>
+<li>It's good to create a branch for each major addition to your project. Don't create a branch if you can't give it a specific name.</li>
+</ul>
+</li>
+<li><strong>Merge branches:</strong> <code>git merge &lt;branch&gt;</code><ul>
+<li>This will merge the specified branch into the current, checked out branch.</li>
+<li>Once you merge branches and they both have the same history, you can now delete the merged branch.</li>
+<li>If the history of the two merging branches have diverged, a 3-way merge is performed, which creates an extra merge commit to act as a link. Otherwise, a fast-forward merge is performed.<ul>
+<li>You can force git to do a merge commit when it would normally do a fast-forward merge by using <code>git merge --no-ff &lt;branch&gt;</code></li>
+</ul>
+</li>
+<li>If a conflict between the merged errors occur, fix the file specified, git add the file and commit it (no -m needed).</li>
+</ul>
+</li>
+<li><strong>Rebase a branch:</strong> <code>git rebase &lt;branch&gt;</code><ul>
+<li>Enables fast-forward merging by moving the branch to the tip of the specified branch. It eliminates the need for merge commits, resulting in a completely linear history.</li>
+<li>May however not be worth it. You lose knowledge on how you got to the current state.</li>
+<li>If done, it must be done locally. Never rebase after being pushed to a shared repo (github).</li>
+</ul>
+</li>
+<li><strong>Delete a branch:</strong> <code>git branch -d &lt;branch&gt;</code><ul>
+<li>Git will warn you if you're about to delete an unmerged branch.</li>
+</ul>
+</li>
+<li><strong>Remove file from tracking</strong> <code>git rm &lt;file&gt;</code><ul>
+<li>Tells git to stop tracking the file, and delete it if necessary.</li>
+</ul>
+</li>
+<li><strong>Start tracking a file</strong> <code>git add &lt;file&gt;</code><ul>
+<li>If a file is not being tracked, this will now track it.</li>
+<li>If you rename a file, you can use <code>git rm</code> for the old file, and then <code>git add</code> for the new file, and git will update it.</li>
+</ul>
+</li>
+</ul>
+<h3 id="remotes">Remotes</h3>
+<p>Remotes are external repositories that you can make a connection to. Creating a remote connection with another repo lets you transfer and merge branches between your repo, and the remote repo.</p>
+<ul>
+<li><strong>Clone a repo:</strong> <code>git clone &lt;remote repo&gt; &lt;local repo&gt;</code><ul>
+<li>This will create a copy of the specified remote repo, and put it in our local repo.</li>
+<li>When you clone a repo, git will add an origin remote by default, pointing to the original repo.</li>
+</ul>
+</li>
+<li><strong>List remote connections</strong> <code>git remote</code><ul>
+<li>This will show a list of the connections you have to other repositories.</li>
+<li>Using the -v flag will give more info on the remotes.</li>
+</ul>
+</li>
+<li><strong>Add a remote connection</strong> <code>git remote add &lt;remote name&gt; &lt;remote repo&gt;</code><ul>
+<li>This will add the remote for easy access (with the name specified), just as the default origin remote does.</li>
+<li>Using <code>git remote rm &lt;remote name&gt;</code> will instead remove the remote connection.</li>
+</ul>
+</li>
+<li><strong>Fetch branches from remote</strong> <code>git fetch &lt;remote name&gt;</code><ul>
+<li>Gets all of the branches from the remote specified, creating copies of them onto your current repo.</li>
+</ul>
+</li>
+<li><strong>List remote branches</strong> <code>git branch -r</code><ul>
+<li>This can be done after fetching the remote branches.</li>
+</ul>
+</li>
+<li><strong>Push branches to a remote</strong> <code>git push &lt;remote name&gt; &lt;branch&gt;</code><ul>
+<li>If pushing an existing branch, git will update that branch on the remote.</li>
+<li>Best to use for centralized repositories (github).</li>
+<li>You can't push unless it results in a fast-forward merge.</li>
+</ul>
+</li>
+</ul>
+<h3 id="tagging">Tagging</h3>
+<p>Tagging allows you to identify a commit with a label, such as when creating a new stable version of a project. You can use tags to refer to commits, instead of using the ID.</p>
+<ul>
+<li><strong>Tag most recent commit:</strong> <code>git tag -a &lt;tag&gt; -m "&lt;message&gt;"</code></li>
+<li><strong>List tags:</strong> <code>git tag</code></li>
+</ul>
+<h3 id="logging">Logging</h3>
+<p>Shows committed history and info.</p>
+<ul>
+<li><strong>Show commit history:</strong> <code>git log</code><ul>
+<li>Only shows history of the current branch. History before the branch split will be shown with an asterisks.</li>
+</ul>
+</li>
+<li><strong>Show history of a single branch:</strong> <code>git log &lt;branch&gt;</code><ul>
+<li>Fetched branches can be logged by using <code>git log &lt;remote name&gt;/&lt;remote branch&gt;</code></li>
+</ul>
+</li>
+<li><strong>Condense output to single line:</strong> <code>git log --oneline</code></li>
+<li><strong>Show history of specific file:</strong> <code>git log --oneline &lt;file&gt;</code></li>
+</ul>
+<h3 id="identify-yourself">Identify Yourself</h3>
+<p>This is user info that be displayed when logging.</p>
+<ul>
+<li><strong>Identify your name to repo:</strong> <code>git config --global user.name "&lt;name&gt;"</code></li>
+<li><strong>Identify your email to repo:</strong> <code>git config --global user.email &lt;email&gt;</code><ul>
+<li>--global flag tells git to use these as a default in other repositories.</li>
+</ul>
+</li>
+</ul>
+<h3 id="useful-tips">Useful Tips</h3>
+<ul>
+<li><strong>Export repo as zip:</strong> <code>git archive &lt;branch&gt; --format=zip --output=&lt;file directory and name&gt;</code><ul>
+<li>Takes the specified branch (usually master) and places its files into a zip, omitting the .git directory.</li>
+</ul>
+</li>
+<li><strong>Bundle a repo:</strong> <code>git bundle create &lt;file directory and name&gt; &lt;branch&gt;</code><ul>
+<li>Takes the specified branch (usually master) and turns it into a repo file that contains all version history.</li>
+</ul>
+</li>
+<li><strong>Ignore files using .gitignore</strong><ul>
+<li>Create a file called .gitignore in the repo folder, and list all files that should not be tracked.</li>
+<li>Wildcards can be used to exclude extensions or directories. Ex: <code>*.exe</code></li>
+</ul>
+</li>
+<li><strong>Stash uncommitted changes:</strong> <code>git stash</code><ul>
+<li>This will temporarily save and remove uncommitted changes. </li>
+<li>Useful if you need to switch to another branch, but haven't finished, and don't want to commit, this uncommitted feature.</li>
+<li>Retrieve the stash with <code>git stash apply</code></li>
+</ul>
+</li>
+<li><strong>View diffs between commits:</strong> <code>git diff &lt;ID&gt;..&lt;ID&gt;</code><ul>
+<li>This will give more in depth (compared to git log) as to which lines were added, removed and altered.</li>
+<li>IDs can be replaces by HEAD~1 HEAD~2 etc. which will show the commits before the current head.</li>
+<li>The '..' is used to compare two commits.</li>
+<li>Uncommitted changes can be viewed with just <code>git diff</code></li>
+<li>Using <code>git diff --cached</code> will show differences between staged snapshot and the most recent commit.</li>
+</ul>
+</li>
+</ul>
+
+
+</body>
+</html>

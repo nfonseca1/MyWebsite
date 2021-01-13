@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Tanks",
+"productVersion": "0.1",
+"dataUrl": "Tanks Sandbox WebGL Build.data.unityweb",
+"wasmCodeUrl": "Tanks Sandbox WebGL Build.wasm.code.unityweb",
+"wasmFrameworkUrl": "Tanks Sandbox WebGL Build.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#000000",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.0f3"
+}

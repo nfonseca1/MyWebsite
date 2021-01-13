@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Project Boost Mobile WebGL</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Project Boost Mobile WebGL Build.json", {onProgress: UnityProgress});
+    </script>
+    <style>
+      body {
+        font-family: arial;
+        overflow-x: hidden;
+      }
+      .info {
+        width: auto; 
+        max-width: 60vw; 
+        padding: 1vh 2vw;
+      }
+      @media screen and (orientation: portrait) {
+          .info {
+            max-width: 95vw;
+            font-size: 2.5vw;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center; position: absolute; width: 100%;">Project Boost Mobile WebGL Build</h2>
+    <br><br><br>
+    <div style="display: flex; justify-content: center;">
+      <div class="info">
+        <h3>Controls</h3>
+        <div style="display: flex; justify-content: space-between;">
+          <span><strong>Rotate Left</strong> - Left Screen</span>
+          <span><strong>Rotate Right</strong> - Middle Screen</span>
+          <span><strong>Thrust</strong> - Right Screen</span>
+        </div>
+        <p>This mobile version should be played in landscape orientation and in fullscreen mode, however, also note it may be unstable as WebGL is not optimized for mobile. For a better experience, try the web version on a PC or Mac.</p>
+      </div>
+    </div>
+    <div class="webgl-content">
+      <div style="display: flex; justify-content: center;">
+        <div id="gameContainer" style="width: 960px; height: 600px;"></div>
+      </div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">Project Boost</div>
+      </div>
+    </div>
+  </body>
+</html>

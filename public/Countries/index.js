@@ -181,7 +181,7 @@ function Specific(country){
 	html += "<button class='back blueBtn'>Back</button>";
 
 	html += "<div class='row'>";
-	html += "<div class='col-4'>";
+	html += "<div class='col-6'>";
 	html += "<table class='title-row'><tr><td><img src=" + country.flag + " class='flag-large'></td>";
 	html += "<td><h3>" + country.name + "</h3></td></tr></table>";
 
@@ -190,6 +190,7 @@ function Specific(country){
 	html += "<tr><td class='col-left'>Country Code</td><td class='col-right'>" + country.alpha2Code + " " + country.alpha3Code + "</td></tr>";
 	html += "<tr><td class='col-left'>Region</td><td class='col-right'>" + country.region + "</td></tr>";
 	html += "<tr><td class='col-left'>Sub Region</td><td class='col-right'>" + country.subregion + "</td></tr>";
+	html += "<tr><td class='col-left'>Population</td><td class='col-right'>" + country.population + "</td></tr>";
 	html += "<tr><td class='col-left'>Coordinates</td><td class='col-right'>" + country.latlng[0] + 
 	" latitude " + country.latlng[1] + " longitude</td></tr>";
 	html += "<tr><td class='col-left'>Area</td><td class='col-right'>" + country.area + " square miles</td></tr>";
@@ -216,23 +217,20 @@ function Specific(country){
 	html += "</td></tr>";
 	html += "</table>";
 
-	html += "</div class='col-4'>";
+	html += "</div class='col-6'>";
 
-	html += "<div class='col-4'>";
-	html += "<h5>Population</h5>";
-	html += "<table class='info-row'>";
-	html += "<tr><td class='col-left'>2018 Population</td><td class='col-right pop-total'></td></tr>";
-	html += "<tr><td class='col-left'>Male Population</td><td class='col-right pop-males'></td></tr>";
-	html += "<tr><td class='col-left'>Female Population</td><td class='col-right pop-females'></td></tr></table>";
-	html += "<table class='info-row'><tr><td class='col-left'><input type='text' class='small-field age' placeholder='Age'>" +
-	"<input type='text' class='small-field year-min' placeholder='Min Year'>"+
-	"<input type='text' class='small-field year-max' placeholder='Max Year'></td><td class='col-right'>"+
-	"<button id='customPopulation' class='yellowBtn customBtn'>Search</button></td><td class='col-right custom-pop'></td></tr>";
-	html += "</table>";
-	html += "<div class='custom-table'></div>";
-	html += "</div class='col-4'>";
+	html += "<div class='col-6'>";
+	//html += "<h5>Population</h5>";
+	//html += "<table class='info-row'>";
+	//for (let i = 2004; i < 2019; i++) {
+	//	
+	//}
+	//html += "<tr><td class='col-left'>2018 Population</td><td class='col-right pop-total'></td></tr>";
+	//html += "<tr><td class='col-left'>Male Population</td><td class='col-right pop-males'></td></tr>";
+	//html += "<tr><td class='col-left'>Female Population</td><td class='col-right pop-females'></td></tr></table>";
+	//html += "</div class='col-6'>";
 
-	html += "<div class='col-4'>";
+	html += "<div class='col-6'>";
 	html += '<div class="post-info-map map">'+
                 '<iframe width="100%" height="100%" frameborder="0" style="border:0"'+
                         'src="https://www.google.com/maps/embed/v1/place?q='+country.name+'&key=AIzaSyCeX3-b79Y5vuookIt2PoSfao9sJ5Odgc8"'+

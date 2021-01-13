@@ -1,0 +1,181 @@
+.list-title {
+    margin-top: 20vh;
+    text-align: center;
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+.projects-list {
+    padding: 0 10vw;
+}
+.navbar {
+    z-index: 99;
+}
+.project {
+    margin-top: 5vh;
+    color: #202020;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 22vh;
+    background-color: rgba(230,230,230,0.9);
+    border-radius: 1vh;
+}
+.project:hover {
+    background-color: rgba(230,230,230,1);
+    transition: background-color 0.2s;
+}
+
+.project .image {
+    display: inline-block;
+    height: 22vh;
+    width: 27%;
+    border-radius: 1vh 0 0 1vh;
+    background-size: cover;
+    background-position: center;
+    transition: width 0.5s, height 0.5s, margin-top 0.5s, border-radius 0.5s;
+}   
+.project .image:hover {
+    position: absolute;
+    height: 35vh;
+    width: 40vw;
+    margin-top: -7vh;
+    border-radius: 0 0 0 0;
+    border: 1px solid #404040;
+    transition: width 0.5s, height 0.5s, margin-top 0.5s, border-radius 0.5s, border 0.5s;
+}
+
+.project-info {
+    display: inline-block;
+    width: 58%;
+    padding: 1vh 0;
+    height: 80%;
+}
+.project-info:hover {
+    cursor: default;
+}
+
+.project-info .title {
+    font-size: 3vh;
+    color: #101010;
+    font-weight: bold;
+    height: 18%;
+}
+
+.project-info .description {
+    margin-top: .75vh;
+    font-size: 2vh;
+    height: 95%;
+    overflow-y: scroll;
+}
+.full-description-btn {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+
+.buttons {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 10%;
+    height: 100%;
+    padding-right: 1.5%;
+}
+
+.option {
+    display: inline-block;
+    height: auto;
+    padding: 10% 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2.6vh;
+    font-weight: bold;
+    color: #0043a8;
+}
+.option:hover {
+    color: #1b62cc;
+    background-color: #d0d0d0;
+    border-radius: 10%;
+    transition: color 0.2s, background-color 0.2s;
+    cursor: pointer;
+}
+
+.image.bashar {
+    background-image: url("./images/bashar.JPG");
+}
+.bashar:hover {
+    background-image: url("./images/bashar.gif");
+} 
+
+.image.tanks {
+    background-image: url("./images/tanks.png");
+}
+.tanks:hover {
+    background-image: url("./images/tanks.gif");
+} 
+
+.image.planni {
+    background-image: url("./images/planni.png");
+}
+.planni:hover {
+    background-image: url("./images/planni.png");
+} 
+
+.image.snappir {
+    background-image: url("./images/snappir.JPG");
+}
+.snappir:hover {
+    background-image: url("./images/snappir.gif");
+} 
+
+.image.project-boost {
+    background-image: url("./images/projectboost.png");
+}
+.project-boost:hover {
+    background-image: url("./images/projectboost.gif");
+} 
+
+.image.countries {
+    background-image: url("./images/countries.JPG");
+}
+.countries:hover {
+    background-image: url("./images/countries.gif");
+} 
+
+.image.fluid-app {
+    background-image: url("./images/fluid.png");
+}
+.fluid-app:hover {
+    background-color: gray;
+    background-image: url("./images/fluid.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+} 
+
+.image.notes-app {
+    background-image: url("./images/notes.png");
+}
+.notes-app:hover {
+    background-color: gray;
+    background-image: url("./images/notes.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+} 
+
+.image.unreal-tanks {
+    background-image: url("./images/unrealTanks.JPG");
+}
+.unreal-tanks:hover {
+    background-image: url("./images/unrealTanks.JPG");
+} 
+
+.image.color-game {
+    background-image: url("./images/color-game.JPG");
+}
+.color-game:hover {
+    background-image: url("./images/colorgame.gif");
+} 
