@@ -353,6 +353,9 @@ a {
 	}
 }
 
+.video-scraper-img {
+	background-image: url("./images/videoscraper.JPG");
+}
 .bashar-img {
 	background-image: url("./images/bashar.JPG");
 }

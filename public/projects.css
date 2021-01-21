@@ -67,6 +67,17 @@
     font-size: 2vh;
     height: 95%;
     overflow-y: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: thin;  /* Firefox */
+    scrollbar-color: #c0c0c0 transparent;
+    
+}
+.project-info .description::-webkit-scrollbar {
+    width: 2px;
+    background-color: transparent;
+}
+.project-info .description::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
 }
 .full-description-btn {
     visibility: hidden;
@@ -101,6 +112,13 @@
     transition: color 0.2s, background-color 0.2s;
     cursor: pointer;
 }
+
+.image.videoscraper {
+    background-image: url("./images/videoscraper.JPG");
+}
+.videoscraper:hover {
+    background-image: url("./images/videoscraper.gif");
+} 
 
 .image.bashar {
     background-image: url("./images/bashar.JPG");
